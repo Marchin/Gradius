@@ -18,12 +18,12 @@ class AssetData {
 			
 			path.set ("assets/images/duck.png", "assets/images/duck.png");
 			type.set ("assets/images/duck.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/osmo/OSMO1.oep", "assets/osmo/OSMO1.oep");
-			type.set ("assets/osmo/OSMO1.oep", Reflect.field (AssetType, "text".toUpperCase ()));
-			path.set ("assets/osmo/test.oel", "assets/osmo/test.oel");
-			type.set ("assets/osmo/test.oel", Reflect.field (AssetType, "text".toUpperCase ()));
-			path.set ("assets/osmo/tiles.png", "assets/osmo/tiles.png");
-			type.set ("assets/osmo/tiles.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/ogmo/OSMO1.oep", "assets/ogmo/OSMO1.oep");
+			type.set ("assets/ogmo/OSMO1.oep", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/ogmo/test.oel", "assets/ogmo/test.oel");
+			type.set ("assets/ogmo/test.oel", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/ogmo/tiles.png", "assets/ogmo/tiles.png");
+			type.set ("assets/ogmo/tiles.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("flixel/sounds/beep.ogg", "flixel/sounds/beep.ogg");
 			type.set ("flixel/sounds/beep.ogg", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("flixel/sounds/flixel.ogg", "flixel/sounds/flixel.ogg");

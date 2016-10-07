@@ -15,7 +15,10 @@ class Nave extends FlxSprite
 {
 	public var disp:Disparo;
 	var bomb:Bomb;
-	var flag:UInt = 0;
+	var count:UInt = 0;
+	var dispEnable:Bool = true;
+	var vidas:UInt = 3;
+	
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
 	{
 		super(X, Y, SimpleGraphic);
@@ -25,16 +28,16 @@ class Nave extends FlxSprite
 		
 		animation.add("fly", [0, 1], 3, true);
 		animation.play("fly");
-		
-		/*		
-		makeGraphic(32,32);
-		x = FlxG.width / 4 - width / 2;
-		y = FlxG.height - height;*/
 	}
 	
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
+		
+		if (count == 0)
+		{
+			dispEnable = true;
+		}
 		
 		if (FlxG.keys.pressed.LEFT && !(x<FlxG.camera.scroll.x))
 			x -= 2;
@@ -46,19 +49,24 @@ class Nave extends FlxSprite
 		if (FlxG.keys.pressed.DOWN && !( y> FlxG.camera.scroll.y + FlxG.height - height))
 			y += 2;
 			
-		if (FlxG.keys.justPressed.SPACE)
+		if (FlxG.keys.justPressed.SPACE && dispEnable==true)
 		{
-			disp = new Disparo(x + width , y +  height/2);
+			disp = new Disparo(x + width , y +  height / 2);
+			dispEnable = false;
+			count = 0;
 			FlxG.state.add(disp);
 		}
-		
 			
 		if (FlxG.keys.justPressed.X)
 		{
 			bomb = new Bomb(x + width/2 , y +  height);
 			FlxG.state.add(bomb);
-		}
-	
+		}	
+
+		count++;
+		count %= 30;
+		
+		
 		velocity.x = 64;
 	}
 
@@ -69,7 +77,8 @@ class Nave extends FlxSprite
 		
 	}
 	
-	public function checkPlayerPos(width_:Float, height_:Float)
-	{	
+	public function removeLive()
+	{
+		vidas--;
 	}
 }

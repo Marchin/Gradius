@@ -16,8 +16,8 @@ class Bomb extends FlxSprite
 		
 		makeGraphic(8, 8);
 		
-		velocity.x = 16;
-		velocity.y = 32;
+		velocity.x = 48;
+		velocity.y = 48;
 	}
 	
 }

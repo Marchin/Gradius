@@ -587,12 +587,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		path.set ("assets/images/duck.png", "assets/images/duck.png");
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
-		path.set ("assets/osmo/OSMO1.oep", "assets/osmo/OSMO1.oep");
-		type.set ("assets/osmo/OSMO1.oep", AssetType.TEXT);
-		path.set ("assets/osmo/test.oel", "assets/osmo/test.oel");
-		type.set ("assets/osmo/test.oel", AssetType.TEXT);
-		path.set ("assets/osmo/tiles.png", "assets/osmo/tiles.png");
-		type.set ("assets/osmo/tiles.png", AssetType.IMAGE);
+		path.set ("assets/ogmo/OSMO1.oep", "assets/ogmo/OSMO1.oep");
+		type.set ("assets/ogmo/OSMO1.oep", AssetType.TEXT);
+		path.set ("assets/ogmo/test.oel", "assets/ogmo/test.oel");
+		type.set ("assets/ogmo/test.oel", AssetType.TEXT);
+		path.set ("assets/ogmo/tiles.png", "assets/ogmo/tiles.png");
+		type.set ("assets/ogmo/tiles.png", AssetType.IMAGE);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -611,13 +611,13 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/duck.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/osmo/OSMO1.oep";
+		id = "assets/ogmo/OSMO1.oep";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/osmo/test.oel";
+		id = "assets/ogmo/test.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/osmo/tiles.png";
+		id = "assets/ogmo/tiles.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "flixel/sounds/beep.ogg";

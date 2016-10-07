@@ -47,9 +47,6 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		
 		FlxG.collide(tilemap, player);
-		
-		
-		player.checkPlayerPos(tilemap.width, tilemap.height);
 	}
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void
@@ -57,7 +54,6 @@ class PlayState extends FlxState
 		if (entityName == "Player")
 		{
 			player = new Nave(Std.parseInt(entityData.get("x")),Std.parseInt(entityData.get("y")));
-			player.velocity.x = 64;
 		}
 	}
 	
