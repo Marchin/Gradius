@@ -585,14 +585,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
-		path.set ("assets/images/Duck-20161003-210123.piskel", "assets/images/Duck-20161003-210123.piskel");
-		type.set ("assets/images/Duck-20161003-210123.piskel", AssetType.TEXT);
-		path.set ("assets/Osmo/OSMO1.oep", "assets/Osmo/OSMO1.oep");
-		type.set ("assets/Osmo/OSMO1.oep", AssetType.TEXT);
-		path.set ("assets/Osmo/test.oel", "assets/Osmo/test.oel");
-		type.set ("assets/Osmo/test.oel", AssetType.TEXT);
-		path.set ("assets/Osmo/tiles.png", "assets/Osmo/tiles.png");
-		type.set ("assets/Osmo/tiles.png", AssetType.IMAGE);
+		path.set ("assets/images/duck.png", "assets/images/duck.png");
+		type.set ("assets/images/duck.png", AssetType.IMAGE);
+		path.set ("assets/osmo/OSMO1.oep", "assets/osmo/OSMO1.oep");
+		type.set ("assets/osmo/OSMO1.oep", AssetType.TEXT);
+		path.set ("assets/osmo/test.oel", "assets/osmo/test.oel");
+		type.set ("assets/osmo/test.oel", AssetType.TEXT);
+		path.set ("assets/osmo/tiles.png", "assets/osmo/tiles.png");
+		type.set ("assets/osmo/tiles.png", AssetType.IMAGE);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -608,16 +608,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
-		id = "assets/images/Duck-20161003-210123.piskel";
+		id = "assets/images/duck.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/osmo/OSMO1.oep";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/Osmo/OSMO1.oep";
+		id = "assets/osmo/test.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/Osmo/test.oel";
-		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "assets/Osmo/tiles.png";
+		id = "assets/osmo/tiles.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "flixel/sounds/beep.ogg";

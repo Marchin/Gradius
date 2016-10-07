@@ -25,7 +25,7 @@ class Disparo extends FlxSprite
 		super.update(elapsed);
 		
 		
-		if (x > FlxG.height)
+		if (x > FlxG.camera.scroll.x + FlxG.width)
 		{
 			destroy();
 		}

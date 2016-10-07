@@ -21,7 +21,12 @@ class Nave extends FlxSprite
 		super(X, Y, SimpleGraphic);
 		disp = new Disparo();
 		disp.kill();
-		loadGraphic(AssetPaths.Duck_20161003_210123__piskel);/*
+		loadGraphic(AssetPaths.duck__png, true, 32, 32);
+		
+		animation.add("fly", [0, 1], 3, true);
+		animation.play("fly");
+		
+		/*		
 		makeGraphic(32,32);
 		x = FlxG.width / 4 - width / 2;
 		y = FlxG.height - height;*/
@@ -30,7 +35,16 @@ class Nave extends FlxSprite
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
-
+		
+		if (FlxG.keys.pressed.LEFT && !(x<FlxG.camera.scroll.x))
+			x -= 2;
+		if (FlxG.keys.pressed.RIGHT && !( x> FlxG.camera.scroll.x + FlxG.width - width))
+			x += 2;
+		
+		if (FlxG.keys.pressed.UP && !(y<0))
+			y -= 2;
+		if (FlxG.keys.pressed.DOWN && !( y> FlxG.camera.scroll.y + FlxG.height - height))
+			y += 2;
 			
 		if (FlxG.keys.justPressed.SPACE)
 		{
@@ -51,18 +65,11 @@ class Nave extends FlxSprite
 	public function getShot():Disparo	
 	{
 		return disp;
+		
+		
 	}
 	
 	public function checkPlayerPos(width_:Float, height_:Float)
 	{	
-		if (FlxG.keys.pressed.LEFT && !(x<0))
-			x -= 2;
-		if (FlxG.keys.pressed.RIGHT && !( x> width_ - width))
-			x += 2;
-		
-		if (FlxG.keys.pressed.UP && !(y<0))
-			y -= 2;
-		if (FlxG.keys.pressed.DOWN && !( y> height_ - height))
-			y += 2;
 	}
 }

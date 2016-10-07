@@ -11,6 +11,7 @@ import sprites.Disparo;
 
 class PlayState extends FlxState
 {
+	private var cameraRail:FlxSprite;
 	private var player:Nave;
 	private var tilemap:FlxTilemap;
 	
@@ -29,10 +30,14 @@ class PlayState extends FlxState
 		
 		loader.loadEntities(placeEntities, "objects");
 		
+		cameraRail = new FlxSprite(player.x, player.y);
+		cameraRail.velocity.x = 64;
+		cameraRail.visible = false;
 		
 		FlxG.camera.setScrollBounds(0, tilemap.width, 0, tilemap.height);
-		FlxG.camera.follow(player);
+		FlxG.camera.follow(cameraRail);
 		
+		add(cameraRail);
 		add(tilemap);
 		add(player);
 	}
