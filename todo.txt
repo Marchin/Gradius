@@ -1,0 +1,8 @@
+codigo cazador
+sprite aguila
+importar codigo aguila
+sprite y codigo piraña
+upgrades
+boss
+vida nave y boss
+score
